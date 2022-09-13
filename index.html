@@ -8,11 +8,12 @@
       Free Modern React Templates &amp; Components for building landing pages
       and UIs - Treact
     </title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <script
       src="https://kit.fontawesome.com/97f14c5a1b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
     <link rel="icon" href="./assets/favicon.ico" />
   </head>
   <body>
@@ -35,8 +36,26 @@
           <a class="nav_link no_cursor link_hover-effect link_hover-effect-black">Login</a>
           <a class="nav_link no_cursor ">Sign Up</a>
         </ul>
+        <button class="btn_menu" onclick="openmenu()">
+          <i class="fas fa-bars"></i>
+        </button>
       </nav>
+      <div class="menu_backdrop">
+        <button class="btn_menu btn_menu-close" onclick="closemenu()">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="menu_links">
+          <li class="menu_list"><a href="" class="menu_link no_cursor link_hover-effect link_hover-effect-black" onclick="closemenu()">About</a></li>
+          <li class="menu_list"><a href="" class="menu_link no_cursor link_hover-effect link_hover-effect-black" onclick="closemenu()">Blog</a></li>
+          <li class="menu_list"><a href="#pricing" class="menu_link link_hover-effect link_hover-effect-black" onclick="closemenu()">Pricing</a></li>
+          <li class="menu_list"><a class="menu_link no_cursor no_cursor link_hover-effect link_hover-effect-black" onclick="closemenu()">Contact Us</a></li>
+          <li class="menu_list"><a class="menu_link no_cursor no_cursor link_hover-effect link_hover-effect-black" onclick="closemenu()">Login</a></li>
+          <li class="menu_list"><a class="menu_link no_cursor no_cursor link_hover-effect link_hover-effect-black" onclick="closemenu()">Sign Up</a></li>
+
+        </ul>
+      </div>
     </div>
+    
     <section id="header">
       <div class="container">
         <div class="row">

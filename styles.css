@@ -44,6 +44,7 @@ p {
 /* NAVIGATION */
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +87,102 @@ nav {
 .nav_link:last-child:hover {
   filter: brightness(80%);
 }
+
+.menu_backdrop{
+  position: absolute;
+  background-color: white;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid #6415ff;
+  border-radius: 20px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+
+}
+.menu_links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24px;
+  color: #242424;
+}
+.btn_menu{
+  position: absolute;
+  right: 38px;
+  font-size: 36px;
+  background: transparent;
+  border: none;
+  display: none;
+  color: #6415ff;
+}
+
+.menu-open .menu_backdrop{
+  max-height: 50vh;
+  visibility: visible;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+  animation: fade-in 800ms;
+  }
+  .menu-close .menu_backdrop{
+    max-height: 50vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    animation: fade-out 800ms;
+    }
+  
+
+
+  .menu_list{
+    padding: 20px 0;
+}
+.menu_link{
+    color: #242424;
+}
+.menu_links{
+  list-style: none;
+}
+.btn_menu-close{
+    right: 56px;
+    top: 6px;
+    padding: 8px;
+    color: #6415ff;
+    display: none;
+    transition: all 300ms ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translatex(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: translatex(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translatex(100%);
+    }
+  }
+
+}
+
 
 /* NAVIGATION */
 
@@ -864,7 +961,7 @@ a{
 
 /* Tablets large smartphones */
 
-@media (max-width: 768px){
+@media (max-width: 864px){
     .nav_links{
         display: none;  
     }
@@ -1050,8 +1147,12 @@ a{
         align-items: center;
         padding: 0px 36px 0 24px;
     }
+    .btn_menu{
+      display: flex;
+    }
 
 }
+
 
 /* Tablets large smartphones */
 
