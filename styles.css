@@ -128,14 +128,12 @@ nav {
   max-height: 50vh;
   visibility: visible;
   opacity: 1;
-  transition: all 500ms ease-in-out;
   animation: fade-in 800ms;
   }
   .menu-close .menu_backdrop{
     max-height: 50vh;
     visibility: hidden;
     opacity: 0;
-    transition: all 500ms ease-in-out;
     animation: fade-out 800ms;
     }
   
@@ -156,7 +154,6 @@ nav {
     padding: 8px;
     color: #6415ff;
     display: none;
-    transition: all 300ms ease-in-out;
 }
 
 @keyframes fade-in {
@@ -181,7 +178,7 @@ nav {
     }
   }
 
-}
+
 
 
 /* NAVIGATION */
